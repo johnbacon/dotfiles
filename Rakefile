@@ -9,7 +9,7 @@ task :install do
   install_oh_my_zsh
   switch_to_zsh
   replace_all = false
-  files = Dir['*'] - %w[Rakefile README.rdoc oh-my-zsh]
+  files = Dir['*'] - %w[Rakefile README.md oh-my-zsh]
   files << "oh-my-zsh/custom/plugins/bacon"
   files.each do |file|
     system %Q{mkdir -p "$HOME/.#{File.dirname(file)}"} if file =~ /\//
